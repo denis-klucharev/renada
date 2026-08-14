@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Русский язык для детей — Ренада Александровна</title>
+  <meta name="description" content="Диагностика и сопровождение изучения русского языка детьми. Педагог начальных классов и психолог в одном лице.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #FDFBF7;
+      --bg-soft:   #F3EBE0;
+      --accent:    #B08968;
+      --accent-dk: #96704F;
+      --accent-bg: #C9AD93;
+      --ink:       #3E2F26;
+      --ink-soft:  #7A6455;
+      --line:      #E6D8C8;
+      --footer:    #4A3A2E;
+      --hero-img:  url("hero.png");
+      --head-font: "Roboto", "Segoe UI", Arial, sans-serif;
+      --body-font: "Open Sans", "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body-font);
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--head-font);
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    p { margin: 0 0 18px; }
+    p:last-child { margin-bottom: 0; }
+
+    .wrap {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ---------- Кнопка-таблетка ---------- */
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--head-font);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 17px 42px;
+      border-radius: 50px;
+      transition: background .2s;
+    }
+    .btn:hover { background: var(--accent-dk); }
+
+    .btn-light {
+      background: #fff;
+      color: var(--ink);
+    }
+    .btn-light:hover { background: var(--bg-soft); }
+
+    /* ---------- Надзаголовок вразрядку ---------- */
+    .kicker {
+      font-family: var(--head-font);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: var(--accent);
+      margin: 0 0 22px;
+    }
+    .kicker-light { color: rgba(255, 255, 255, .85); }
+
+    /* ---------- Шапка ---------- */
+    .site-header {
+      background: var(--ink);
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    .site-header .wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 44px; height: 44px;
+      flex: 0 0 44px;
+      border: 2px solid rgba(255, 255, 255, .8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--head-font);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    .logo-text {
+      font-family: var(--head-font);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.35;
+    }
+    .site-nav {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .site-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--head-font);
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-color .2s;
+    }
+    .site-nav a:hover { border-bottom-color: var(--accent-bg); }
+
+    /* ---------- Герой: фото сверху, текст под ним ---------- */
+    .hero-photo {
+      height: clamp(300px, 56vh, 600px);
+      background-color: var(--accent-bg);
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-position: center 20%;
+      background-repeat: no-repeat;
+    }
+    .hero-text {
+      padding: 78px 0 86px;
+      text-align: center;
+    }
+    .hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .hero-text h1 {
+      font-size: clamp(36px, 5.8vw, 80px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 26px;
+    }
+    .hero-lead {
+      font-size: 19px;
+      color: var(--ink-soft);
+      margin: 0 auto 36px;
+      max-width: 640px;
+    }
+
+    /* ---------- Общие секции ---------- */
+    section { padding: 104px 0; }
+
+    .section-title {
+      font-size: clamp(32px, 4.4vw, 56px);
+      margin-bottom: 26px;
+    }
+    .section-title-sm { font-size: clamp(28px, 3.4vw, 42px); }
+
+    .lead { font-size: 19px; color: var(--ink-soft); }
+
+    .soft { background: var(--bg-soft); }
+
+    .centered {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .centered .kicker { letter-spacing: 6px; }
+
+    /* ---------- Две колонки ---------- */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .photo-panel {
+      min-height: 460px;
+      border-radius: 4px;
+      background-color: var(--accent-bg);
+      background-image: var(--hero-img);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .photo-crop-sign  { background-position: center 88%; }
+    .photo-crop-face  { background-position: center 18%; }
+
+    /* ---------- Список аудиторий / шагов ---------- */
+    .num-list {
+      list-style: none;
+      margin: 34px 0 0;
+      padding: 0;
+    }
+    .num-list li {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 18px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+    .num-list li:last-child { border-bottom: 1px solid var(--line); }
+    .num-list .n {
+      font-family: var(--head-font);
+      font-weight: 900;
+      font-size: 26px;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+    .num-list h3 {
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+    .num-list p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* ---------- Акцентная полоса с карточками ---------- */
+    .accent-band {
+      background: var(--accent-bg);
+      color: #fff;
+      text-align: center;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 44px 56px;
+      margin-top: 60px;
+      text-align: left;
+    }
+    .card-grid h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+    .card-grid p {
+      color: rgba(255, 255, 255, .92);
+      font-size: 16px;
+      margin: 0;
+    }
+    .card-grid .card {
+      border-top: 3px solid rgba(255, 255, 255, .55);
+      padding-top: 22px;
+    }
+
+    /* ---------- Три колонки ---------- */
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      margin-top: 58px;
+    }
+    .three-col .step-num {
+      font-family: var(--head-font);
+      font-weight: 900;
+      font-size: 15px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .three-col h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+    .three-col p {
+      color: var(--ink-soft);
+      font-size: 16px;
+    }
+
+    /* ---------- Тёмная полоса «Путь» ---------- */
+    .dark-band {
+      background: var(--ink);
+      color: #fff;
+    }
+    .dark-band .section-title { color: #fff; }
+    .dark-band .three-col .step-num { color: var(--accent-bg); }
+    .dark-band .three-col p { color: rgba(255, 255, 255, .82); }
+    .dark-band .three-col > div {
+      border-top: 3px solid rgba(255, 255, 255, .35);
+      padding-top: 24px;
+    }
+
+    /* ---------- Цены ---------- */
+    .price-list { margin-top: 56px; }
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+    }
+    .price-row:last-child { border-bottom: 1px solid var(--line); }
+    .price-row h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .price-row p {
+      color: var(--ink-soft);
+      font-size: 16px;
+      margin: 0;
+      max-width: 620px;
+    }
+    .price-tag {
+      font-family: var(--head-font);
+      font-weight: 900;
+      font-size: 30px;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .price-note {
+      margin-top: 30px;
+      font-size: 15px;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- Цитата ---------- */
+    .quote {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .quote blockquote {
+      margin: 0;
+      font-family: var(--head-font);
+      font-size: clamp(26px, 3.4vw, 40px);
+      font-weight: 400;
+      line-height: 1.35;
+    }
+    .quote .mark {
+      font-family: var(--head-font);
+      font-weight: 900;
+      font-size: 64px;
+      color: var(--accent);
+      line-height: 1;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    /* ---------- Финальный призыв ---------- */
+    .cta {
+      background-color: var(--ink);
+      background-image:
+        linear-gradient(rgba(62, 47, 38, .86), rgba(62, 47, 38, .86)),
+        var(--hero-img);
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      color: #fff;
+      text-align: center;
+    }
+    .cta .section-title { color: #fff; }
+    .cta p { color: rgba(255, 255, 255, .88); }
+    .cta-contact {
+      margin-top: 34px;
+      font-size: 16px;
+      color: rgba(255, 255, 255, .8);
+    }
+    .cta-contact a { color: #fff; }
+
+    /* ---------- Подвал ---------- */
+    footer {
+      background: var(--footer);
+      color: rgba(255, 255, 255, .7);
+      text-align: center;
+      padding: 34px 0;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ---------- Мобильная версия ---------- */
+    @media (max-width: 900px) {
+      .two-col, .three-col, .card-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .photo-panel { min-height: 320px; }
+    }
+
+    @media (max-width: 768px) {
+      body { font-size: 16px; }
+      .wrap { padding: 0 22px; }
+      section { padding: 68px 0; }
+
+      .site-header {
+        height: auto;
+        padding: 18px 0;
+      }
+      .site-header .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .site-nav {
+        gap: 16px 22px;
+        justify-content: flex-start;
+      }
+
+      .hero-photo { height: 300px; }
+      .hero-text { padding: 52px 0 60px; }
+      .hero-inner { max-width: none; }
+      .hero-lead { font-size: 17px; }
+
+      .price-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .btn { padding: 15px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="#top">
+        <span class="logo-mark">РА</span>
+        <span class="logo-text">Ренада<br>Александровна</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#about">О подходе</a>
+        <a href="#who">Кому</a>
+        <a href="#how">Как устроено</a>
+        <a href="#prices">Цены</a>
+        <a href="#contact">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero-photo" id="top" role="img"
+       aria-label="Педагог в классной комнате с табличкой «5+»"></div>
+
+  <section class="hero-text">
+    <div class="wrap">
+      <div class="hero-inner">
+        <p class="kicker">Диагностика и сопровождение</p>
+        <h1>Русский язык для детей</h1>
+        <p class="hero-lead">
+          Разбираемся, что на самом деле мешает вашему ребёнку — и составляем
+          понятный план на 2–3 месяца. Педагог начальных классов и психолог в одном лице.
+        </p>
+        <a class="btn" href="#contact">Записаться на диагностику</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="about">
+    <div class="wrap">
+      <div class="centered">
+        <p class="kicker">О подходе</p>
+        <h2 class="section-title">Дело редко бывает в падежах</h2>
+        <p class="lead">
+          Когда у ребёнка «не идёт» русский, родители ищут ещё одного репетитора.
+          Но чаще причина не в правилах: ребёнок боится ошибиться, устал от бесконечных
+          занятий без результата, потерял интерес — особенно если растёт вне русскоязычной среды.
+        </p>
+        <p class="lead">
+          Вы платите не за час занятия, а за ответ на вопрос: что именно происходит
+          с моим ребёнком и что с этим делать.
+        </p>
+        <p style="margin-top: 34px;">
+          <a class="btn" href="#how">Как это устроено</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <p class="kicker">Кому это нужно</p>
+          <h2 class="section-title">Если занятия идут, а результата нет</h2>
+          <ul class="num-list">
+            <li>
+              <span class="n">01</span>
+              <div>
+                <h3>Русскоязычным семьям за рубежом</h3>
+                <p>ОАЭ, Европа, Азия. Родители тревожатся, что ребёнок теряет русский,
+                   и не понимают, за что хвататься в первую очередь.</p>
+              </div>
+            </li>
+            <li>
+              <span class="n">02</span>
+              <div>
+                <h3>Когда русский «не идёт» вопреки всему</h3>
+                <p>Репетиторы были, занятия шли, а ребёнок всё так же сопротивляется.
+                   Значит, причина лежит не в программе.</p>
+              </div>
+            </li>
+            <li>
+              <span class="n">03</span>
+              <div>
+                <h3>Тем, кто разочаровался в репетиторстве</h3>
+                <p>Устали от массовых онлайн-школ и обезличенных курсов, хотят,
+                   чтобы кто-то наконец посмотрел именно на их ребёнка.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="photo-panel photo-crop-sign" role="img"
+             aria-label="Педагог в классе с табличкой «5+»"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="accent-band" id="teacher">
+    <div class="wrap">
+      <div class="centered">
+        <p class="kicker kicker-light">Кто занимается</p>
+        <h2 class="section-title">Предметник и психолог в одном лице</h2>
+        <p style="color: rgba(255,255,255,.92); font-size: 19px;">
+          Сочетание, которого почти нет на рынке: у большинства репетиторов нет
+          психологического образования, у большинства детских психологов — предметной методики.
+        </p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Педагог-практик</h3>
+          <p>Большой опыт онлайн-преподавания русского языка детям 1–5 классов
+             в «Фоксфорде» и в частной практике. Подтверждённый результат, а не теория.</p>
+        </div>
+        <div class="card">
+          <h3>Психологическое образование</h3>
+          <p>Умеет увидеть за «не понимает падежи» настоящую причину: тревожность,
+             страх ошибки, конфликт с родителями вокруг учёбы, потерю мотивации.</p>
+        </div>
+        <div class="card">
+          <h3>Опыт работы с детьми вне уроков</h3>
+          <p>В том числе фотосъёмки в детских садах. Понимает детскую психологию
+             не только за партой и умеет быстро находить контакт.</p>
+        </div>
+        <div class="card">
+          <h3>Работа один на один</h3>
+          <p>Никакого потока. Формат сознательно рассчитан на небольшое число семей,
+             чтобы каждому ребёнку доставалось внимание.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="kicker">Как это устроено</p>
+      <h2 class="section-title">Три части, а не расписание уроков</h2>
+      <p class="lead" style="max-width: 720px;">
+        Смысл не в том, чтобы набрать больше часов, а в том, чтобы вы понимали,
+        что делаете и зачем.
+      </p>
+      <div class="three-col">
+        <div>
+          <div class="step-num">Часть 1</div>
+          <h3>Диагностическая консультация</h3>
+          <p>Встреча 60–90 минут с родителем и ребёнком. Ищем настоящую причину —
+             методическую, мотивационную или психологическую. На выходе письменный
+             индивидуальный план на 2–3 месяца: что делать, в каком порядке,
+             какие материалы брать и чего избегать.</p>
+        </div>
+        <div>
+          <div class="step-num">Часть 2</div>
+          <h3>Точечное сопровождение</h3>
+          <p>Не еженедельные уроки, а короткие сессии раз в 2–3 недели: сверяем прогресс
+             и корректируем план. Между встречами родитель и ребёнок работают
+             самостоятельно по понятной инструкции.</p>
+        </div>
+        <div>
+          <div class="step-num">Часть 3</div>
+          <h3>Практика с ИИ между сессиями</h3>
+          <p>Чат-бот с упражнениями, диктантами и игровыми заданиями, подстроенными
+             под план вашего ребёнка. Ребёнок тренируется сам, а педагог следит
+             за прогрессом и вовремя вмешивается.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="diagnostics">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="photo-panel photo-crop-face" role="img"
+             aria-label="Педагог в классной комнате"></div>
+        <div>
+          <p class="kicker">Диагностика</p>
+          <h2 class="section-title-sm">С чего всё начинается</h2>
+          <p>
+            Диагностическая консультация — это не пробный урок и не знакомство.
+            Это отдельная работа: за 60–90 минут вместе с вами и ребёнком
+            выясняется, где именно сломалось.
+          </p>
+          <p>
+            Иногда оказывается, что нужна не программа за третий класс, а разговор
+            о том, почему ребёнок перестал пробовать. Иногда — наоборот, находится
+            конкретный методический пробел, который тянет за собой всё остальное.
+          </p>
+          <p>
+            Вы уходите с письменным планом на 2–3 месяца. Даже если дальше
+            мы не работаем вместе — план остаётся у вас.
+          </p>
+          <p style="margin-top: 30px;">
+            <a class="btn" href="#contact">Записаться на диагностику</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-band" id="path">
+    <div class="wrap">
+      <p class="kicker kicker-light">Путь</p>
+      <h2 class="section-title">Как проходит работа</h2>
+      <div class="three-col">
+        <div>
+          <div class="step-num">Шаг 1</div>
+          <h3>Диагностика</h3>
+          <p>Одна встреча. Разбираемся в причине и получаем письменный план.</p>
+        </div>
+        <div>
+          <div class="step-num">Шаг 2</div>
+          <h3>Сопровождение 2–3 месяца</h3>
+          <p>4–6 коротких сессий, доступ к ИИ-практике, корректировка плана по ходу.</p>
+        </div>
+        <div>
+          <div class="step-num">Шаг 3</div>
+          <h3>Новый цикл — если нужен</h3>
+          <p>Повторная диагностика: смотрим, что изменилось, и решаем, нужен ли следующий круг.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <p class="kicker">Стоимость</p>
+      <h2 class="section-title">Цены</h2>
+      <div class="price-list">
+        <div class="price-row">
+          <div>
+            <h3>Диагностическая консультация</h3>
+            <p>Встреча 60–90 минут с родителем и ребёнком + письменный
+               индивидуальный план на 2–3 месяца.</p>
+          </div>
+          <div class="price-tag">$80–150</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <h3>Пакет сопровождения, 2–3 месяца</h3>
+            <p>4–6 коротких сессий, индивидуальный план и его корректировка,
+               доступ к ИИ-практике между встречами.</p>
+          </div>
+          <div class="price-tag">$250–450</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <h3>Повторная диагностика / новый цикл</h3>
+            <p>Сверка результатов через несколько месяцев и решение,
+               что делать дальше.</p>
+          </div>
+          <div class="price-tag">$60–100</div>
+        </div>
+      </div>
+      <p class="price-note">
+        Точная цена зависит от возраста ребёнка и объёма работы — обсуждаем до начала.
+      </p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap">
+      <div class="quote">
+        <span class="mark">«</span>
+        <blockquote>
+          Мы не наращиваем часы. Мы разбираемся, почему не идёт.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="wrap">
+      <div class="centered">
+        <p class="kicker kicker-light">Первый шаг</p>
+        <h2 class="section-title">Записаться на диагностику</h2>
+        <p style="font-size: 19px;">
+          Напишите пару слов о ребёнке: возраст, класс и что именно вас беспокоит.
+          В ответ придёт время встречи и что подготовить.
+        </p>
+        <p style="margin-top: 34px;">
+          <a class="btn btn-light" href="mailto:ЗАМЕНИТЕ@example.com">Написать</a>
+        </p>
+        <p class="cta-contact">
+          Почта: <a href="mailto:ЗАМЕНИТЕ@example.com">ЗАМЕНИТЕ@example.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ренада Александровна · Русский язык для детей
+  </footer>
+
+</body>
+</html>
