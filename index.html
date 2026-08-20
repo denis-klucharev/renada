@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Курс «Сочинение на 5!» — Ренада Александровна</title>
+  <title>Курс «Сочинение на 5!» — Ренада Александровна Долбина</title>
   <meta name="description" content="Онлайн-курс для детей: учимся писать сочинения. Группы 6–12 человек, занятия в Zoom раз в неделю, бессрочно.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -207,22 +207,8 @@
       margin: 0 auto;
     }
 
-    /* ---------- Две колонки ---------- */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .photo-panel {
-      min-height: 460px;
-      border-radius: 4px;
-      background-color: var(--accent-bg);
-      background-image: var(--hero-img);
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .photo-crop-sign { background-position: center center; }
+
+    .lesson-body { max-width: 720px; }
 
     /* ---------- Нумерованные шаги ---------- */
     .num-list {
@@ -505,12 +491,11 @@
       .price-grid { grid-template-columns: 1fr; }
       .teacher-intro { grid-template-columns: 1fr; gap: 32px; }
       .portrait { max-width: 260px; margin: 0 auto; }
-      .two-col, .three-col, .card-grid, .card-grid-3 {
+      .three-col, .card-grid, .card-grid-3 {
         grid-template-columns: 1fr;
         gap: 40px;
       }
       .goals { grid-template-columns: 1fr; gap: 0; }
-      .photo-panel { min-height: 320px; }
     }
 
     @media (max-width: 768px) {
@@ -546,14 +531,12 @@
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="#top">
-        <span class="logo-mark">РА</span>
-        <span class="logo-text">Ренада<br>Александровна</span>
+        <span class="logo-mark">РД</span>
+        <span class="logo-text">Ренада Александровна<br>Долбина</span>
       </a>
       <nav class="site-nav">
         <a href="#about">О курсе</a>
-        <a href="#program">Программа</a>
-        <a href="#lesson">Занятие</a>
-        <a href="#format">Формат</a>
+        <a href="#teacher">Преподаватель</a>
         <a href="#prices">Стоимость</a>
         <a href="#contact">Записаться</a>
       </nav>
@@ -597,10 +580,12 @@
   <section class="accent-band" id="teacher">
     <div class="wrap">
       <div class="teacher-intro">
-        <div class="portrait" role="img" aria-label="Ренада Александровна, преподаватель курса"></div>
+        <div class="portrait" role="img" aria-label="Ренада Александровна Долбина, преподаватель курса"></div>
         <div>
           <p class="kicker kicker-light">Кто ведёт</p>
-          <h2 class="section-title-sm">Ренада Александровна</h2>
+          <h2 class="section-title-sm">Ренада Александровна Долбина</h2>
+          <p>Преподаватель русского языка с большим стажем и современными
+             методиками.</p>
           <p>Педагог и психолог в одном лице — сочетание, которого почти нет
              на рынке частных занятий.</p>
         </div>
@@ -646,9 +631,7 @@
 
   <section class="soft" id="lesson">
     <div class="wrap">
-      <div class="two-col">
-        <div class="photo-panel photo-crop-sign" role="img"
-             aria-label="Школьник с листом «5+» в классной комнате"></div>
+      <div class="lesson-body">
         <div>
           <p class="kicker">Занятие</p>
           <h2 class="section-title-sm">Как проходит встреча</h2>
@@ -773,7 +756,7 @@
   </section>
 
   <footer>
-    © 2026 Ренада Александровна · Курс «Сочинение на 5!»
+    © 2026 Ренада Александровна Долбина · Курс «Сочинение на 5!»
   </footer>
 
 </body>
