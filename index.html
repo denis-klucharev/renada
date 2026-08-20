@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Русский язык для детей — Ренада Александровна</title>
-  <meta name="description" content="Диагностика и сопровождение изучения русского языка детьми. Педагог начальных классов и психолог в одном лице.">
+  <title>Курс «Сочинение на 5!» — Ренада Александровна</title>
+  <meta name="description" content="Онлайн-курс для детей: учимся писать сочинения. Четыре модуля, группы 6–12 человек, занятия в Zoom раз в неделю.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
@@ -200,7 +200,6 @@
       max-width: 780px;
       margin: 0 auto;
     }
-    .centered .kicker { letter-spacing: 6px; }
 
     /* ---------- Две колонки ---------- */
     .two-col {
@@ -217,10 +216,9 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-    .photo-crop-sign  { background-position: center 88%; }
-    .photo-crop-face  { background-position: center 18%; }
+    .photo-crop-sign { background-position: center 88%; }
 
-    /* ---------- Список аудиторий / шагов ---------- */
+    /* ---------- Нумерованные шаги ---------- */
     .num-list {
       list-style: none;
       margin: 34px 0 0;
@@ -230,25 +228,25 @@
       display: grid;
       grid-template-columns: 46px 1fr;
       gap: 18px;
-      padding: 22px 0;
+      padding: 18px 0;
       border-top: 1px solid var(--line);
     }
     .num-list li:last-child { border-bottom: 1px solid var(--line); }
     .num-list .n {
       font-family: var(--head-font);
       font-weight: 900;
-      font-size: 26px;
+      font-size: 24px;
       color: var(--accent);
-      line-height: 1.2;
+      line-height: 1.25;
     }
     .num-list h3 {
-      font-size: 19px;
-      margin-bottom: 6px;
+      font-size: 18px;
+      line-height: 1.3;
     }
     .num-list p {
       color: var(--ink-soft);
-      font-size: 16px;
-      margin: 0;
+      font-size: 15px;
+      margin: 6px 0 0;
     }
 
     /* ---------- Акцентная полоса с карточками ---------- */
@@ -264,6 +262,7 @@
       margin-top: 60px;
       text-align: left;
     }
+    .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
     .card-grid h3 {
       font-size: 21px;
       margin-bottom: 10px;
@@ -276,6 +275,30 @@
     .card-grid .card {
       border-top: 3px solid rgba(255, 255, 255, .55);
       padding-top: 22px;
+    }
+
+    /* ---------- Список «чему научится» ---------- */
+    .goals {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 48px;
+      margin: 40px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .goals li {
+      position: relative;
+      padding: 15px 0 15px 30px;
+      border-bottom: 1px solid var(--line);
+      font-size: 16px;
+    }
+    .goals li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 24px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
     }
 
     /* ---------- Три колонки ---------- */
@@ -303,74 +326,18 @@
       font-size: 16px;
     }
 
-    /* ---------- Тёмная полоса «Путь» ---------- */
+    /* ---------- Тёмная полоса «Формат» ---------- */
     .dark-band {
       background: var(--ink);
       color: #fff;
     }
     .dark-band .section-title { color: #fff; }
+    .dark-band .lead { color: rgba(255, 255, 255, .82); }
     .dark-band .three-col .step-num { color: var(--accent-bg); }
     .dark-band .three-col p { color: rgba(255, 255, 255, .82); }
     .dark-band .three-col > div {
       border-top: 3px solid rgba(255, 255, 255, .35);
       padding-top: 24px;
-    }
-
-    /* ---------- Цены ---------- */
-    .price-list { margin-top: 56px; }
-    .price-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 32px;
-      align-items: center;
-      padding: 30px 0;
-      border-top: 1px solid var(--line);
-    }
-    .price-row:last-child { border-bottom: 1px solid var(--line); }
-    .price-row h3 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-    .price-row p {
-      color: var(--ink-soft);
-      font-size: 16px;
-      margin: 0;
-      max-width: 620px;
-    }
-    .price-tag {
-      font-family: var(--head-font);
-      font-weight: 900;
-      font-size: 30px;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-    .price-note {
-      margin-top: 30px;
-      font-size: 15px;
-      color: var(--ink-soft);
-    }
-
-    /* ---------- Цитата ---------- */
-    .quote {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .quote blockquote {
-      margin: 0;
-      font-family: var(--head-font);
-      font-size: clamp(26px, 3.4vw, 40px);
-      font-weight: 400;
-      line-height: 1.35;
-    }
-    .quote .mark {
-      font-family: var(--head-font);
-      font-weight: 900;
-      font-size: 64px;
-      color: var(--accent);
-      line-height: 1;
-      display: block;
-      margin-bottom: 12px;
     }
 
     /* ---------- Финальный призыв ---------- */
@@ -407,10 +374,11 @@
 
     /* ---------- Мобильная версия ---------- */
     @media (max-width: 900px) {
-      .two-col, .three-col, .card-grid {
+      .two-col, .three-col, .card-grid, .card-grid-3 {
         grid-template-columns: 1fr;
         gap: 40px;
       }
+      .goals { grid-template-columns: 1fr; gap: 0; }
       .photo-panel { min-height: 320px; }
     }
 
@@ -438,10 +406,6 @@
       .hero-inner { max-width: none; }
       .hero-lead { font-size: 17px; }
 
-      .price-row {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
       .btn { padding: 15px 32px; }
     }
   </style>
@@ -455,10 +419,10 @@
         <span class="logo-text">Ренада<br>Александровна</span>
       </a>
       <nav class="site-nav">
-        <a href="#about">О подходе</a>
-        <a href="#who">Кому</a>
-        <a href="#how">Как устроено</a>
-        <a href="#prices">Цены</a>
+        <a href="#about">О курсе</a>
+        <a href="#program">Программа</a>
+        <a href="#lesson">Занятие</a>
+        <a href="#format">Формат</a>
         <a href="#contact">Записаться</a>
       </nav>
     </div>
@@ -470,13 +434,13 @@
   <section class="hero-text">
     <div class="wrap">
       <div class="hero-inner">
-        <p class="kicker">Диагностика и сопровождение</p>
-        <h1>Русский язык для детей</h1>
+        <p class="kicker">Онлайн-курс для детей</p>
+        <h1>Сочинение на 5!</h1>
         <p class="hero-lead">
-          Разбираемся, что на самом деле мешает вашему ребёнку — и составляем
-          понятный план на 2–3 месяца. Педагог начальных классов и психолог в одном лице.
+          Разбираемся, что на самом деле мешает вашему ребёнку писать сочинения.
+          Составляем план на 3 месяца.
         </p>
-        <a class="btn" href="#contact">Записаться на диагностику</a>
+        <a class="btn" href="#contact">Записаться на курс</a>
       </div>
     </div>
   </section>
@@ -485,58 +449,16 @@
     <div class="wrap">
       <div class="centered">
         <p class="kicker">О подходе</p>
-        <h2 class="section-title">Дело редко бывает в падежах</h2>
+        <h2 class="section-title">От «у меня не получается» к «я умею»</h2>
         <p class="lead">
-          Когда у ребёнка «не идёт» русский, родители ищут ещё одного репетитора.
-          Но чаще причина не в правилах: ребёнок боится ошибиться, устал от бесконечных
-          занятий без результата, потерял интерес — особенно если растёт вне русскоязычной среды.
+          В школьной программе сочинениям уделяется мало места: основной упор идёт
+          на правила. В итоге ребёнок не умеет выражать свои мысли, анализировать
+          текст, делать выводы.
         </p>
         <p class="lead">
-          Вы платите не за час занятия, а за ответ на вопрос: что именно происходит
-          с моим ребёнком и что с этим делать.
+          Ребёнок устаёт от бесконечных занятий без результата и теряет интерес —
+          особенно если растёт вне русскоязычной среды.
         </p>
-        <p style="margin-top: 34px;">
-          <a class="btn" href="#how">Как это устроено</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="who">
-    <div class="wrap">
-      <div class="two-col">
-        <div>
-          <p class="kicker">Кому это нужно</p>
-          <h2 class="section-title">Если занятия идут, а результата нет</h2>
-          <ul class="num-list">
-            <li>
-              <span class="n">01</span>
-              <div>
-                <h3>Русскоязычным семьям за рубежом</h3>
-                <p>ОАЭ, Европа, Азия. Родители тревожатся, что ребёнок теряет русский,
-                   и не понимают, за что хвататься в первую очередь.</p>
-              </div>
-            </li>
-            <li>
-              <span class="n">02</span>
-              <div>
-                <h3>Когда русский «не идёт» вопреки всему</h3>
-                <p>Репетиторы были, занятия шли, а ребёнок всё так же сопротивляется.
-                   Значит, причина лежит не в программе.</p>
-              </div>
-            </li>
-            <li>
-              <span class="n">03</span>
-              <div>
-                <h3>Тем, кто разочаровался в репетиторстве</h3>
-                <p>Устали от массовых онлайн-школ и обезличенных курсов, хотят,
-                   чтобы кто-то наконец посмотрел именно на их ребёнка.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="photo-panel photo-crop-sign" role="img"
-             aria-label="Педагог в классе с табличкой «5+»"></div>
       </div>
     </div>
   </section>
@@ -544,170 +466,119 @@
   <section class="accent-band" id="teacher">
     <div class="wrap">
       <div class="centered">
-        <p class="kicker kicker-light">Кто занимается</p>
-        <h2 class="section-title">Предметник и психолог в одном лице</h2>
-        <p style="color: rgba(255,255,255,.92); font-size: 19px;">
-          Сочетание, которого почти нет на рынке: у большинства репетиторов нет
-          психологического образования, у большинства детских психологов — предметной методики.
-        </p>
+        <p class="kicker kicker-light">Кто ведёт</p>
+        <h2 class="section-title">Педагог и психолог в одном лице</h2>
       </div>
-      <div class="card-grid">
+      <div class="card-grid card-grid-3">
         <div class="card">
           <h3>Педагог-практик</h3>
-          <p>Большой опыт онлайн-преподавания русского языка детям 1–5 классов
-             в «Фоксфорде» и в частной практике. Подтверждённый результат, а не теория.</p>
+          <p>Большой опыт преподавания в начальной и средней школе. Преподаватель
+             русского языка и литературного чтения в онлайн-школе «Фоксфорд».</p>
         </div>
         <div class="card">
-          <h3>Психологическое образование</h3>
-          <p>Умеет увидеть за «не понимает падежи» настоящую причину: тревожность,
-             страх ошибки, конфликт с родителями вокруг учёбы, потерю мотивации.</p>
+          <h3>Педагог-психолог</h3>
+          <p>Умеет увидеть настоящую причину неудач: тревожность, страх ошибки,
+             конфликт с родителями вокруг учёбы, потерю мотивации.</p>
         </div>
         <div class="card">
-          <h3>Опыт работы с детьми вне уроков</h3>
-          <p>В том числе фотосъёмки в детских садах. Понимает детскую психологию
-             не только за партой и умеет быстро находить контакт.</p>
-        </div>
-        <div class="card">
-          <h3>Работа один на один</h3>
-          <p>Никакого потока. Формат сознательно рассчитан на небольшое число семей,
-             чтобы каждому ребёнку доставалось внимание.</p>
+          <h3>От сердца к сердцу</h3>
+          <p>Понимает детей не только в учебной среде, но и за её пределами.
+             Именно любовь к детям вдохновляет на прекрасные детские стихи.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="how">
+  <section id="program">
     <div class="wrap">
-      <p class="kicker">Как это устроено</p>
-      <h2 class="section-title">Три части, а не расписание уроков</h2>
+      <p class="kicker">Программа</p>
+      <h2 class="section-title">Четыре модуля, 2–3 сочинения в каждом</h2>
       <p class="lead" style="max-width: 720px;">
-        Смысл не в том, чтобы набрать больше часов, а в том, чтобы вы понимали,
-        что делаете и зачем.
+        В итоге ребёнок научится писать сочинения на разные темы.
       </p>
-      <div class="three-col">
-        <div>
-          <div class="step-num">Часть 1</div>
-          <h3>Диагностическая консультация</h3>
-          <p>Встреча 60–90 минут с родителем и ребёнком. Ищем настоящую причину —
-             методическую, мотивационную или психологическую. На выходе письменный
-             индивидуальный план на 2–3 месяца: что делать, в каком порядке,
-             какие материалы брать и чего избегать.</p>
-        </div>
-        <div>
-          <div class="step-num">Часть 2</div>
-          <h3>Точечное сопровождение</h3>
-          <p>Не еженедельные уроки, а короткие сессии раз в 2–3 недели: сверяем прогресс
-             и корректируем план. Между встречами родитель и ребёнок работают
-             самостоятельно по понятной инструкции.</p>
-        </div>
-        <div>
-          <div class="step-num">Часть 3</div>
-          <h3>Практика с ИИ между сессиями</h3>
-          <p>Чат-бот с упражнениями, диктантами и игровыми заданиями, подстроенными
-             под план вашего ребёнка. Ребёнок тренируется сам, а педагог следит
-             за прогрессом и вовремя вмешивается.</p>
-        </div>
-      </div>
+      <h3 style="font-size: 22px; margin-top: 48px;">Чему научится ребёнок</h3>
+      <ul class="goals">
+        <li>Обретёт уверенность при письме</li>
+        <li>Научится выражать свои мысли и чувства на бумаге</li>
+        <li>Освоит разные типы сочинений: описание, повествование, рассуждение</li>
+        <li>Расширит словарный запас</li>
+        <li>Разовьёт креативное мышление</li>
+        <li>Научится структурировать текст</li>
+      </ul>
     </div>
   </section>
 
-  <section class="soft" id="diagnostics">
+  <section class="soft" id="lesson">
     <div class="wrap">
       <div class="two-col">
-        <div class="photo-panel photo-crop-face" role="img"
-             aria-label="Педагог в классной комнате"></div>
+        <div class="photo-panel photo-crop-sign" role="img"
+             aria-label="Педагог в классе с табличкой «5+»"></div>
         <div>
-          <p class="kicker">Диагностика</p>
-          <h2 class="section-title-sm">С чего всё начинается</h2>
-          <p>
-            Диагностическая консультация — это не пробный урок и не знакомство.
-            Это отдельная работа: за 60–90 минут вместе с вами и ребёнком
-            выясняется, где именно сломалось.
-          </p>
-          <p>
-            Иногда оказывается, что нужна не программа за третий класс, а разговор
-            о том, почему ребёнок перестал пробовать. Иногда — наоборот, находится
-            конкретный методический пробел, который тянет за собой всё остальное.
-          </p>
-          <p>
-            Вы уходите с письменным планом на 2–3 месяца. Даже если дальше
-            мы не работаем вместе — план остаётся у вас.
-          </p>
-          <p style="margin-top: 30px;">
-            <a class="btn" href="#contact">Записаться на диагностику</a>
+          <p class="kicker">Занятие</p>
+          <h2 class="section-title-sm">Как проходит встреча</h2>
+          <ol class="num-list">
+            <li>
+              <span class="n">01</span>
+              <div>
+                <h3>Встречаемся в Zoom</h3>
+                <p>Раз в неделю, в группах от 6 до 12 человек.</p>
+              </div>
+            </li>
+            <li>
+              <span class="n">02</span>
+              <div><h3>Обсуждаем тему занятия, беседуем</h3></div>
+            </li>
+            <li>
+              <span class="n">03</span>
+              <div>
+                <h3>Выполняем упражнения</h3>
+                <p>На развитие конкретных навыков: подбор средств художественной
+                   выразительности, составление плана рассказа.</p>
+              </div>
+            </li>
+            <li>
+              <span class="n">04</span>
+              <div><h3>Получаем памятку для работы дома</h3></div>
+            </li>
+            <li>
+              <span class="n">05</span>
+              <div><h3>Пишем сочинение</h3></div>
+            </li>
+            <li>
+              <span class="n">06</span>
+              <div><h3>Присылаем на проверку</h3></div>
+            </li>
+            <li>
+              <span class="n">07</span>
+              <div><h3>Получаем обратную связь</h3></div>
+            </li>
+          </ol>
+          <p style="margin-top: 28px; color: var(--ink-soft);">
+            Между встречами родитель и ребёнок работают самостоятельно
+            по понятной инструкции.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="dark-band" id="path">
+  <section class="dark-band" id="format">
     <div class="wrap">
-      <p class="kicker kicker-light">Путь</p>
-      <h2 class="section-title">Как проходит работа</h2>
+      <p class="kicker kicker-light">Формат</p>
+      <h2 class="section-title">Небольшая группа, живые встречи</h2>
       <div class="three-col">
         <div>
-          <div class="step-num">Шаг 1</div>
-          <h3>Диагностика</h3>
-          <p>Одна встреча. Разбираемся в причине и получаем письменный план.</p>
+          <div class="step-num">Группа</div>
+          <h3>6–12 человек</h3>
         </div>
         <div>
-          <div class="step-num">Шаг 2</div>
-          <h3>Сопровождение 2–3 месяца</h3>
-          <p>4–6 коротких сессий, доступ к ИИ-практике, корректировка плана по ходу.</p>
+          <div class="step-num">Встречи</div>
+          <h3>Раз в неделю</h3>
         </div>
         <div>
-          <div class="step-num">Шаг 3</div>
-          <h3>Новый цикл — если нужен</h3>
-          <p>Повторная диагностика: смотрим, что изменилось, и решаем, нужен ли следующий круг.</p>
+          <div class="step-num">Площадка</div>
+          <h3>Zoom, онлайн</h3>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="prices">
-    <div class="wrap">
-      <p class="kicker">Стоимость</p>
-      <h2 class="section-title">Цены</h2>
-      <div class="price-list">
-        <div class="price-row">
-          <div>
-            <h3>Диагностическая консультация</h3>
-            <p>Встреча 60–90 минут с родителем и ребёнком + письменный
-               индивидуальный план на 2–3 месяца.</p>
-          </div>
-          <div class="price-tag">$80–150</div>
-        </div>
-        <div class="price-row">
-          <div>
-            <h3>Пакет сопровождения, 2–3 месяца</h3>
-            <p>4–6 коротких сессий, индивидуальный план и его корректировка,
-               доступ к ИИ-практике между встречами.</p>
-          </div>
-          <div class="price-tag">$250–450</div>
-        </div>
-        <div class="price-row">
-          <div>
-            <h3>Повторная диагностика / новый цикл</h3>
-            <p>Сверка результатов через несколько месяцев и решение,
-               что делать дальше.</p>
-          </div>
-          <div class="price-tag">$60–100</div>
-        </div>
-      </div>
-      <p class="price-note">
-        Точная цена зависит от возраста ребёнка и объёма работы — обсуждаем до начала.
-      </p>
-    </div>
-  </section>
-
-  <section class="soft">
-    <div class="wrap">
-      <div class="quote">
-        <span class="mark">«</span>
-        <blockquote>
-          Мы не наращиваем часы. Мы разбираемся, почему не идёт.
-        </blockquote>
       </div>
     </div>
   </section>
@@ -716,10 +587,10 @@
     <div class="wrap">
       <div class="centered">
         <p class="kicker kicker-light">Первый шаг</p>
-        <h2 class="section-title">Записаться на диагностику</h2>
+        <h2 class="section-title">Записаться на курс</h2>
         <p style="font-size: 19px;">
           Напишите пару слов о ребёнке: возраст, класс и что именно вас беспокоит.
-          В ответ придёт время встречи и что подготовить.
+          В ответ придёт информация о ближайшей группе.
         </p>
         <p style="margin-top: 34px;">
           <a class="btn btn-light" href="mailto:renada-foto@mail.ru">Написать</a>
@@ -732,7 +603,7 @@
   </section>
 
   <footer>
-    © 2026 Ренада Александровна · Русский язык для детей
+    © 2026 Ренада Александровна · Курс «Сочинение на 5!»
   </footer>
 
 </body>
