@@ -346,6 +346,65 @@
       padding-top: 24px;
     }
 
+    /* ---------- Стоимость ---------- */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 54px;
+      max-width: 800px;
+    }
+    .price-card {
+      border: 2px solid var(--line);
+      border-radius: 6px;
+      padding: 34px 32px;
+    }
+    .price-card-best {
+      border-color: var(--accent);
+      background: var(--bg-soft);
+    }
+    .price-card .plan {
+      font-family: var(--head-font);
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent-tx);
+      margin-bottom: 16px;
+    }
+    .price-card .sum {
+      font-family: var(--head-font);
+      font-weight: 900;
+      font-size: 42px;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .price-card .per {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin-top: 10px;
+    }
+    .price-card .save {
+      display: inline-block;
+      font-family: var(--head-font);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: var(--on-accent);
+      padding: 6px 15px;
+      border-radius: 20px;
+      margin-top: 16px;
+    }
+    .price-card .desc {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
     /* ---------- Финальный призыв ---------- */
     .cta {
       background-color: var(--band);
@@ -380,6 +439,7 @@
 
     /* ---------- Мобильная версия ---------- */
     @media (max-width: 900px) {
+      .price-grid { grid-template-columns: 1fr; }
       .two-col, .three-col, .card-grid, .card-grid-3 {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -429,6 +489,7 @@
         <a href="#program">Программа</a>
         <a href="#lesson">Занятие</a>
         <a href="#format">Формат</a>
+        <a href="#prices">Стоимость</a>
         <a href="#contact">Записаться</a>
       </nav>
     </div>
@@ -584,6 +645,31 @@
         <div>
           <div class="step-num">Площадка</div>
           <h3>Zoom, онлайн</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <p class="kicker">Стоимость</p>
+      <h2 class="section-title">Сколько стоит</h2>
+      <p class="lead" style="max-width: 720px;">
+        Можно платить помесячно, а можно сразу за три месяца — так выходит дешевле.
+      </p>
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="plan">Помесячно</div>
+          <div class="sum">2&nbsp;990&nbsp;₽</div>
+          <div class="per">в месяц</div>
+          <p class="desc">Оплата за каждый месяц отдельно.</p>
+        </div>
+        <div class="price-card price-card-best">
+          <div class="plan">Сразу за три месяца</div>
+          <div class="sum">6&nbsp;990&nbsp;₽</div>
+          <div class="per">это 2&nbsp;330&nbsp;₽ в месяц</div>
+          <span class="save">Экономия 1&nbsp;980&nbsp;₽</span>
+          <p class="desc">Один платёж за весь период.</p>
         </div>
       </div>
     </div>
