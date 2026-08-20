@@ -22,7 +22,7 @@
       --ink-soft:  #6F6A61;
       --line:      #E7E2D8;
       --footer:    #6E6960;
-      --hero-img:  url("hero.png");
+      --hero-img:  url("hero.jpg");
       --head-font: "Roboto", "Segoe UI", Arial, sans-serif;
       --body-font: "Open Sans", "Segoe UI", Arial, sans-serif;
     }
@@ -157,11 +157,13 @@
 
     /* ---------- Герой: фото сверху, текст под ним ---------- */
     .hero-photo {
-      height: clamp(300px, 56vh, 600px);
+      width: 100%;
+      aspect-ratio: 1808 / 1024;
+      max-height: min(72vh, 700px);
       background-color: var(--accent-bg);
       background-image: var(--hero-img);
       background-size: cover;
-      background-position: center 20%;
+      background-position: center 50%;
       background-repeat: no-repeat;
     }
     .hero-text {
@@ -220,7 +222,7 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-    .photo-crop-sign { background-position: center 88%; }
+    .photo-crop-sign { background-position: center center; }
 
     /* ---------- Нумерованные шаги ---------- */
     .num-list {
@@ -405,7 +407,7 @@
         justify-content: flex-start;
       }
 
-      .hero-photo { height: 300px; }
+      .hero-photo { aspect-ratio: auto; height: 300px; }
       .hero-text { padding: 52px 0 60px; }
       .hero-inner { max-width: none; }
       .hero-lead { font-size: 17px; }
@@ -433,7 +435,7 @@
   </header>
 
   <div class="hero-photo" id="top" role="img"
-       aria-label="Педагог в классной комнате с табличкой «5+»"></div>
+       aria-label="Школьник в классе держит лист с оценкой «5+»"></div>
 
   <section class="hero-text">
     <div class="wrap">
@@ -516,7 +518,7 @@
     <div class="wrap">
       <div class="two-col">
         <div class="photo-panel photo-crop-sign" role="img"
-             aria-label="Педагог в классе с табличкой «5+»"></div>
+             aria-label="Школьник с листом «5+» в классной комнате"></div>
         <div>
           <p class="kicker">Занятие</p>
           <h2 class="section-title-sm">Как проходит встреча</h2>
