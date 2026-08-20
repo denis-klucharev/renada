@@ -23,6 +23,8 @@
       --ink-soft:  #6F6A61;
       --line:      #E7E2D8;
       --footer:    #6E6960;
+      --gold:      #D9B87C;
+      --gold-lt:   #E8C98F;
       --hero-img:  url("hero.jpg");
       --head-font: "Roboto", "Segoe UI", Arial, sans-serif;
       --body-font: "Open Sans", "Segoe UI", Arial, sans-serif;
@@ -152,6 +154,16 @@
       transition: border-color .2s;
     }
     .site-nav a:hover { border-bottom-color: var(--accent-bg); }
+    .site-nav a.nav-cta {
+      background: var(--gold);
+      color: var(--on-accent);
+      padding: 10px 24px;
+      border-radius: 50px;
+      border-bottom: 0;
+      margin-left: 4px;
+      transition: background .2s;
+    }
+    .site-nav a.nav-cta:hover { background: var(--gold-lt); }
 
     /* ---------- Герой: фото сверху, текст под ним ---------- */
     .hero-photo {
@@ -536,7 +548,7 @@
         <a href="#about">О курсе</a>
         <a href="#teacher">Преподаватель</a>
         <a href="#prices">Стоимость</a>
-        <a href="#contact">Записаться</a>
+        <a class="nav-cta" href="#contact">Записаться</a>
       </nav>
     </div>
   </header>
