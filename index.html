@@ -10,15 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:        #FDFBF7;
-      --bg-soft:   #F3EBE0;
-      --accent:    #B08968;
-      --accent-dk: #96704F;
-      --accent-bg: #C9AD93;
-      --ink:       #3E2F26;
-      --ink-soft:  #7A6455;
-      --line:      #E6D8C8;
-      --footer:    #4A3A2E;
+      --bg:        #FCFBF8;
+      --bg-soft:   #F1EEE7;
+      --accent:    #B3A18C;
+      --accent-lt: #C4B5A3;
+      --accent-tx: #7B6549;
+      --on-accent: #332F2A;
+      --band:      #6B665D;
+      --accent-bg: #D8CEC0;
+      --ink:       #56514A;
+      --ink-soft:  #6F6A61;
+      --line:      #E7E2D8;
+      --footer:    #6E6960;
       --hero-img:  url("hero.png");
       --head-font: "Roboto", "Segoe UI", Arial, sans-serif;
       --body-font: "Open Sans", "Segoe UI", Arial, sans-serif;
@@ -58,7 +61,7 @@
     .btn {
       display: inline-block;
       background: var(--accent);
-      color: #fff;
+      color: var(--on-accent);
       text-decoration: none;
       font-family: var(--head-font);
       font-weight: 700;
@@ -69,7 +72,7 @@
       border-radius: 50px;
       transition: background .2s;
     }
-    .btn:hover { background: var(--accent-dk); }
+    .btn:hover { background: var(--accent-lt); }
 
     .btn-light {
       background: #fff;
@@ -84,14 +87,15 @@
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 6px;
-      color: var(--accent);
+      color: var(--accent-tx);
       margin: 0 0 22px;
     }
-    .kicker-light { color: rgba(255, 255, 255, .85); }
+    .kicker-light { color: rgba(255, 255, 255, .88); }
+    .accent-band .kicker-light { color: var(--ink); }
 
     /* ---------- Шапка ---------- */
     .site-header {
-      background: var(--ink);
+      background: var(--band);
       height: 80px;
       display: flex;
       align-items: center;
@@ -236,7 +240,7 @@
       font-family: var(--head-font);
       font-weight: 900;
       font-size: 24px;
-      color: var(--accent);
+      color: var(--accent-tx);
       line-height: 1.25;
     }
     .num-list h3 {
@@ -252,7 +256,7 @@
     /* ---------- Акцентная полоса с карточками ---------- */
     .accent-band {
       background: var(--accent-bg);
-      color: #fff;
+      color: var(--ink);
       text-align: center;
     }
     .card-grid {
@@ -268,12 +272,12 @@
       margin-bottom: 10px;
     }
     .card-grid p {
-      color: rgba(255, 255, 255, .92);
+      color: var(--ink);
       font-size: 16px;
       margin: 0;
     }
     .card-grid .card {
-      border-top: 3px solid rgba(255, 255, 255, .55);
+      border-top: 3px solid rgba(86, 81, 74, .3);
       padding-top: 22px;
     }
 
@@ -314,7 +318,7 @@
       font-size: 15px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-tx);
       margin-bottom: 14px;
     }
     .three-col h3 {
@@ -328,23 +332,23 @@
 
     /* ---------- Тёмная полоса «Формат» ---------- */
     .dark-band {
-      background: var(--ink);
+      background: var(--band);
       color: #fff;
     }
     .dark-band .section-title { color: #fff; }
-    .dark-band .lead { color: rgba(255, 255, 255, .82); }
-    .dark-band .three-col .step-num { color: var(--accent-bg); }
-    .dark-band .three-col p { color: rgba(255, 255, 255, .82); }
+    .dark-band .lead { color: rgba(255, 255, 255, .9); }
+    .dark-band .three-col .step-num { color: rgba(255, 255, 255, .95); }
+    .dark-band .three-col p { color: rgba(255, 255, 255, .9); }
     .dark-band .three-col > div {
-      border-top: 3px solid rgba(255, 255, 255, .35);
+      border-top: 3px solid rgba(255, 255, 255, .4);
       padding-top: 24px;
     }
 
     /* ---------- Финальный призыв ---------- */
     .cta {
-      background-color: var(--ink);
+      background-color: var(--band);
       background-image:
-        linear-gradient(rgba(62, 47, 38, .86), rgba(62, 47, 38, .86)),
+        linear-gradient(rgba(107, 102, 93, .9), rgba(107, 102, 93, .9)),
         var(--hero-img);
       background-size: cover;
       background-position: center 30%;
@@ -357,14 +361,14 @@
     .cta-contact {
       margin-top: 34px;
       font-size: 16px;
-      color: rgba(255, 255, 255, .8);
+      color: rgba(255, 255, 255, .9);
     }
     .cta-contact a { color: #fff; }
 
     /* ---------- Подвал ---------- */
     footer {
       background: var(--footer);
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255, 255, 255, .92);
       text-align: center;
       padding: 34px 0;
       font-size: 13px;
